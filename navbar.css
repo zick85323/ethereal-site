@@ -1,0 +1,97 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #26f737;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 100, 0, 0.1);
+  animation: slideDown 0.8s ease-in-out;
+}
+
+.navbar-logo .icon {
+  width: 170px;
+  height: 56px;
+  animation: pulseIcon 2s infinite;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: #14532d;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-link i {
+  font-size: 1.1rem;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.navbar-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-cta {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-cta:hover {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(21, 128, 61, 0.5);
+}
+
+/* Dark mode support */
+body.dark-mode .navbar {
+  background-color: #1e293b;
+}
+
+body.dark-mode .navbar-link {
+  color: #f8fafc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 12px;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  .navbar-link, .navbar-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethereal's World of Artistry</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --background-light: #ccffd8;
+      --background-dark: #0d0f1c;
+      --text-light: #000;
+      --text-dark: #fff;
+      --highlight: #00ff8c;
+      --header-bg-light: #b1ffb4;
+      --header-bg-dark: #11152b;
+      --card-bg-light: #e0ffe9;
+      --card-bg-dark: #1b2236;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+      transition: all 0.3s ease;
+    }
+
+    body.light-mode {
+      background-color: var(--background-light);
+      color: var(--text-light);
+    }
+
+    header {
+      background-color: var(--header-bg-dark);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    body.light-mode header {
+      background-color: var(--header-bg-light);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      background: var(--highlight);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .back-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1em;
+      background-color: var(--highlight);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(180deg, var(--background-dark), #152038);
+      padding: 60px 20px;
+    }
+    body.light-mode .hero {
+      background: linear-gradient(180deg, var(--background-light), #b3fcb1);
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(0,255,0,0.3);
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background-color: var(--card-bg-dark);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    body.light-mode .skill-card {
+      background-color: var(--card-bg-light);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 140, 0.2);
+    }
+
+    .skill-card i {
+      font-size: 2em;
+      color: var(--highlight);
+      margin-bottom: 10px;
+    }
+
+    .skill-card h4 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .cta button {
+      background-color: var(--highlight);
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta button:hover {
+      background-color: #00e67a;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 60px auto;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #aaa;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: var(--highlight);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="back-home" href="index.html">⬅ Home</a>
+    <h2>Ethereal</h2>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓Theme</div>
+  </header>
+
+  <section class="hero">
+    <img src="assets/photo15.jpg" alt="Ethereal Artistry" />
+    <h1>ETHEREAL’s WORLD OF ARTISTRY</h1>
+    <p>
+      This is also a great utility feature on Ethereal where we provide our users with the most sought-after and advanced digital courses. These are certified digital skills that are beyond the present, and will keep our users essential in every aspect of the labor market, skilled enough to land any remote job.
+      <br><br>
+      All these digital skills have been uploaded for <strong>FREE</strong> on ETHEREAL’s World of Artistry. Upon completion, certificates are made available for all users, and the exceptional ones are rewarded.
+      <br><br>
+      Stay Relevant with Ethereal, <em>Evolve with the present to have a future to present!</em>
+    </p>
+  </section>
+
+  <section class="skills-grid">
+    <div class="skill-card"><i class="fas fa-shield-alt"></i><h4>Cybersecurity</h4></div>
+    <div class="skill-card"><i class="fas fa-robot"></i><h4>AI (Artificial Intelligence)</h4></div>
+    <div class="skill-card"><i class="fas fa-cubes"></i><h4>Blockchain Development</h4></div>
+    <div class="skill-card"><i class="fas fa-pen-nib"></i><h4>Content Creation & Writing</h4></div>
+    <div class="skill-card"><i class="fas fa-pencil-ruler"></i><h4>Graphic Design</h4></div>
+    <div class="skill-card"><i class="fas fa-video"></i><h4>Video Production & Editing</h4></div>
+    <div class="skill-card"><i class="fas fa-shopping-cart"></i><h4>E-commerce & Online Retail</h4></div>
+    <div class="skill-card"><i class="fas fa-bullhorn"></i><h4>Marketing & Branding</h4></div>
+    <div class="skill-card"><i class="fas fa-microphone"></i><h4>Public Speaking & Presentation</h4></div>
+    <div class="skill-card"><i class="fas fa-language"></i><h4>Language Proficiency</h4></div>
+    <div class="skill-card"><i class="fas fa-keyboard"></i><h4>Copywriting & Strategy</h4></div>
+    <div class="skill-card"><i class="fas fa-paint-brush"></i><h4>NFT & Digital Art</h4></div>
+  </section>
+
+  <section class="cta">
+    <button>Join us now</button>
+  </section>
+
+  <div class="slideshow-container">
+    <div class="slide fade"><img src="assets/photo7.jpg" alt="Slide 1"></div>
+    <div class="slide fade"><img src="assets/photo8.jpg" alt="Slide 2"></div>
+    <div class="slide fade"><img src="assets/photo9.jpg" alt="Slide 3"></div>
+    <div class="slide fade"><img src="assets/photo10.jpg" alt="Slide 4"></div>
+  </div>
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+      setTimeout(showSlides, 5000);
+    }
+
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      showSlides();
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    window.onload = showSlides;
+  </script>
+</body>
+</html>

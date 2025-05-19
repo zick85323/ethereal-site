@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --background-light: #ccffd8;
+      --background-dark: #0d0f1c;
+      --text-light: #000;
+      --text-dark: #fff;
+      --highlight: #00ff8c;
+      --header-bg-light: #b1ffb4;
+      --header-bg-dark: #11152b;
+      --card-bg-light: #e0ffe9;
+      --card-bg-dark: #1b2236;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+      transition: all 0.3s ease;
+    }
+
+    body.light-mode {
+      background-color: var(--background-light);
+      color: var(--text-light);
+    }
+
+    header {
+      background-color: var(--header-bg-dark);
+      padding: 20px;
+      text-align: center;
+    }
+    body.light-mode header {
+      background-color: var(--header-bg-light);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      background: var(--highlight);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    
+    .back-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1em;
+      background-color: var(--highlight);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .main-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .main-section h1 {
+      font-size: 2.2em;
+      color: var(--highlight);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .main-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      background-color: var(--highlight);
+      color: #000;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 255, 140, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back-home" href="index.html">⬅ Home</a>
+    <h2>Registration</h2>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓Theme</div>
+  </header>
+
+  <section class="main-section">
+    <h1>Join Ethereal’s Global Network</h1>
+    <p>
+      Ethereal is a future-forward digital ecosystem delivering elite skills, global
+      opportunities, and innovation. Connect with our community on Telegram and WhatsApp
+      to stay ahead in the digital revolution.
+    </p>
+    <div class="buttons">
+      <a href="https://t.me/m/ZWw3eCRXMzc0" target="_blank">📲 Telegram Channel</a>
+      <a href="https://whatsapp.com/channel/0029VbAQ63e42DcjfllXR83l" target="_blank">💬 WhatsApp Channel</a>
+    </div>
+
+    <h1>About Ethereal</h1>
+    <p>
+      We are a leading digital platform dedicated to empowering users with the tools,
+      knowledge, and network to thrive in the digital economy. From advanced skill
+      training to professional development, we are shaping the future.
+    </p>
+
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+      <img src="assets/photo11.jpg" alt="Gallery 1" />
+      <img src="assets/photo12.jpg" alt="Gallery 2" />
+      <img src="assets/photo13.jpg" alt="Gallery 3" />
+      <img src="assets/photo14.jpg" alt="Gallery 4" />
+      <img src="assets/photo15.jpg" alt="Gallery 4" />
+      <img src="assets/photo16.jpg" alt="Gallery 4" />
+    </div> 
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
